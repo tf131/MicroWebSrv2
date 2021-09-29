@@ -164,11 +164,11 @@ class HttpRequest :
                 self._routeResult.Handler(self._mws2, self, self._routeResult.Args)
             else :
                 self._routeResult.Handler(self._mws2, self)
-            if not self._response.HeadersSent :
-                self._mws2.Log( 'No response was sent from route %s.'
-                                % self._routeResult,
-                                self._mws2.WARNING )
-                self._response.ReturnNotImplemented()
+#            if not self._response.HeadersSent :
+#                self._mws2.Log( 'No response was sent from route %s.'
+#                                % self._routeResult,
+#                                self._mws2.WARNING )
+#                self._response.ReturnNotImplemented()
         except Exception as ex :
             self._mws2.Log( 'Exception raised from route %s: %s'
                             % (self._routeResult, ex),
